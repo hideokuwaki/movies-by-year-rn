@@ -7,4 +7,4 @@
 
   - Screenshot:
 
-  [Screenshot](screenshot.png), caso deseje testar a API em um servidor local é necessário alterar o endereço e recompilar o aplicativo.
+  ![Screenshot](screenshot.png)
