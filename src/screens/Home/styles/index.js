@@ -66,6 +66,10 @@ export const styles = StyleSheet.create({
     borderWidth: 1,
     borderRadius: 3,
   },
+  movieItemText: {
+    fontSize: 16,
+    color: colors.gray,
+  },
   loading: {
     flex: 1,
     flexDirection: 'column',

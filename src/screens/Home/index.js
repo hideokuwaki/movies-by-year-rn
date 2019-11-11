@@ -75,11 +75,11 @@ const List = props => {
         {props.movies.moviesByYear.map((movie, i) => {
           return (
             <View key={String(i)} style={styles.movieItem}>
-              <Text>
+              <Text style={styles.movieItemText}>
                 {movie.year}
               </Text>
 
-              <Text>
+              <Text style={styles.movieItemText}>
                 {movie.movies}
               </Text>
             </View>
@@ -114,7 +114,7 @@ const Title = () => {
   return (
     <View style={styles.titleContainer}>
       <Text style={styles.titleText}>
-        Movies by year
+        Movies by Year
       </Text>
     </View>
   );
