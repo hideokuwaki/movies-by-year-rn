@@ -1,8 +1,7 @@
 import { ToastAndroid } from 'react-native';
 import axios from 'axios';
 
-//const DOMAIN = 'http://moviesbyyear.us-east-2.elasticbeanstalk.com';
-const DOMAIN = 'http://192.168.15.5:3000';
+const DOMAIN = 'http://moviesbyyear.us-east-2.elasticbeanstalk.com';
 
 export const getMoviesByYear = async (name = '') => {
 

@@ -69,9 +69,8 @@ const List = props => {
     );
   }
 
-  return (
-    <>
-      {props.movies.total > 0 ? <ListTitle /> : null}
+  const ListContent = () => {
+    return (
       <ScrollView contentContainerStyle={styles.list}>
         {props.movies.moviesByYear.map((movie, i) => {
           return (
@@ -87,6 +86,13 @@ const List = props => {
           );
         })}
       </ScrollView>
+    );
+  }
+
+  return (
+    <>
+      {props.movies.total > 0 ? <ListTitle /> : null}
+      <ListContent />
     </>
   );
 }
@@ -102,6 +108,16 @@ const SearchButton = props => {
       </Text>
     </TouchableOpacity>
   )
+}
+
+const Title = () => {
+  return (
+    <View style={styles.titleContainer}>
+      <Text style={styles.titleText}>
+        Movies by year
+      </Text>
+    </View>
+  );
 }
 
 const Home = () => {
@@ -122,11 +138,7 @@ const Home = () => {
 
   return (
     <View style={styles.mainContainer}>
-      <View style={styles.titleContainer}>
-        <Text style={styles.titleText}>
-          Movies by year
-        </Text>
-      </View>
+      <Title />
 
       <Input
         inputStyle={styles.inputStyle}
